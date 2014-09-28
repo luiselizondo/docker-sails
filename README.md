@@ -27,4 +27,12 @@ If you need to run any sails command, just do:
 
 	docker run --it --rm -v /path_to_project_on_host:/var/www luis/sails sails command
 
+### Includes
 
+- sails
+- mocha 
+- sinon
+- should
+- assert
+- grunt
+- bower

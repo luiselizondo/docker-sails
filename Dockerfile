@@ -3,7 +3,9 @@ MAINTAINER Luis Elizondo "lelizondo@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN npm install -g sails
+RUN apt-get update
+RUN apt-get install -y git
+RUN npm install -g sails mocha sinon should assert grunt bower
 
 RUN rm /etc/supervisor/conf.d/*.conf
 ADD ./config/supervisord.conf /etc/supervisor/conf.d/supervisord-nodejs.conf
