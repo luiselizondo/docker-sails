@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
 RUN apt-get install -y git
-RUN npm install -g sails mocha sinon should assert grunt bower
+RUN npm install -g sails mocha sinon should assert grunt-cli bower
 
 RUN rm /etc/supervisor/conf.d/*.conf
 ADD ./config/supervisord.conf /etc/supervisor/conf.d/supervisord-nodejs.conf
